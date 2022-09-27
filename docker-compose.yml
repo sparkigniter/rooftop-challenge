@@ -1,9 +1,18 @@
 version: '2'
 services:
   php:
-    image: yiisoftware/yii2-php:7.1-apache
+    image: yiisoftware/yii2-php:7.2-apache
     volumes:
       - ~/.composer-docker/cache:/root/.composer/cache:delegated
       - ./:/app:delegated
     ports:
       - '8000:80'
+  postgres:
+      container_name: 'pgdbcore'
+      image: 'postgres:12'
+      ports:
+          - '5432:5432'
+      volumes:
+          - ./init/db-init.sql:/docker-entrypoint-initdb.d/0-db-init.sql
+      environment:
+          POSTGRES_HOST_AUTH_METHOD: trust

@@ -3,29 +3,26 @@
 namespace app\core\models;
 
 use app\core\types\UserStatus;
-use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
-use yii\web\IdentityInterface;
 use yiier\helpers\DateHelper;
 
 /**
- * This is the model class for table "{{%user}}".
+ * This is the model class for table "{{%appointment_booking}}".
  *
  * @property int $id
- * @property string $first_name
- * @property string $last_name
+ * @property string title
  * @property int $created_at
  * @property int $updated_at
  */
-class User extends ActiveRecord
+class AppointmentBooking extends ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return '{{%user}}';
+        return '{{%appointment_booking}}';
     }
 
     /**

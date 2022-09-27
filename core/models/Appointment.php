@@ -18,14 +18,14 @@ use yiier\helpers\DateHelper;
  * @property int $created_at
  * @property int $updated_at
  */
-class User extends ActiveRecord
+class Appointment extends ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return '{{%user}}';
+        return '{{%appointment}}';
     }
 
     /**
@@ -47,7 +47,6 @@ class User extends ActiveRecord
     public function rules()
     {
         return [
-
         ];
     }
 
@@ -75,5 +74,13 @@ class User extends ActiveRecord
         };
 
         return $fields;
+    }
+
+    public function getWeekDay(){
+       return $this->hasOne(Weekday::className(),['id' => 'week_day_id'])->one();
+    }
+
+    public function getTimeZone(){
+        return $this->hasOne(Timezone::className(),['id' => 'timezone_id'])->one();
     }
 }

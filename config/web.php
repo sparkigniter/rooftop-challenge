@@ -46,8 +46,7 @@ $config = [
             'currencyCode' => 'CNY',
         ],
         'user' => [
-            'identityClass' => User::class,
-            'enableAutoLogin' => true,
+            'identityClass' => User::class
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
