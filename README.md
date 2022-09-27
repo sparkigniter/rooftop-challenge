@@ -11,7 +11,7 @@
    3. ``m220926_122921_create_week_days``
    4. ``m220926_122945_create_appointment``
    5. ``m220927_043928_appointment_booking``
-4. Seed the test data using below commands
+4. Seed the test data using below commands (The data is stored in csv file: https://github.com/vikasmb123/rooftop-challenge/blob/master/init/data/seed-data.csv)
    1. ``php yii generate/user-data`` => Seed the users data
    2. ``php yii generate/timezone-data`` => Seed the timezone data
    3. ``php yii generate/week-days-data`` => Seed the week days data
