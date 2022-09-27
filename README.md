@@ -61,3 +61,6 @@ Get users (coaches)
 <img width="1440" alt="Screenshot 2022-09-27 at 12 25 20 PM" src="https://user-images.githubusercontent.com/11609189/192454821-28bd1c6a-bfac-4681-84e9-03e92398fba2.png">
 create appointment slot booking 
 <img width="1440" alt="Screenshot 2022-09-27 at 12 26 04 PM" src="https://user-images.githubusercontent.com/11609189/192454940-a5226773-7161-428a-94f6-aae240d3ab35.png">
+4. Test suite run
+<img width="1440" alt="Screenshot 2022-09-27 at 12 29 52 PM" src="https://user-images.githubusercontent.com/11609189/192455817-12c7503f-c0f4-478f-b269-7bd86306f318.png">
+ 
