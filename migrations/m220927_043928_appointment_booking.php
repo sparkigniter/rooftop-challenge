@@ -31,7 +31,7 @@ class m220927_043928_appointment_booking extends Migration
      */
     public function safeDown()
     {
-        $this->dropForeignKey('appointment_booking_appointment_id_fk', 'appointment');
+        $this->dropForeignKey('appointment_booking_appointment_id_fk', 'appointment_booking');
         $this->dropTable('{{%appointment_booking}}');
     }
 }

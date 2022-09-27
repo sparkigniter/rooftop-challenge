@@ -4,6 +4,8 @@ namespace app\modules\v1\controllers;
 
 
 use app\core\models\AppointmentBooking;
+use yii\db\Exception;
+use yii\web\ServerErrorHttpException;
 
 
 /**
@@ -19,8 +21,16 @@ class AppointmentBookingController extends ActiveController
         return [];
     }
 
+    /**
+     * @return string|void
+     * @throws ServerErrorHttpException
+     * @throws \yii\base\InvalidConfigException
+     * This function creates a booking appointment
+     */
      public function actionCreate()
      {
+         try{
+         //TODO : ADD VALIDATION FOR ALREADY BOOKED SLOT
          $model = new AppointmentBooking();
          $body = \Yii::$app->request->getBodyParams();
          $model->appointment_id = $body['appointment_id'];
@@ -28,8 +38,11 @@ class AppointmentBookingController extends ActiveController
          $model->to = $body['to'];
          $model->updated_by = 1;
          $model->created_by = 1;
-         if($model->save())
-            return "Successfully creating booking";
+         if ($model->save())
+             return "Successfully creating booking";
+         }catch (\Exception $e){
+             throw new ServerErrorHttpException("Something went wrong");
+         }
      }
 }
 
