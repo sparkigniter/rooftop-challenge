@@ -1,3 +1,6 @@
+Framework : Yii2
+Template : https://github.com/forecho/yii2-rest-api
+
 #Project Setup (Using Docker)
 1. Install vendor packages using command
 ``docker-compose run --rm php composer install``
